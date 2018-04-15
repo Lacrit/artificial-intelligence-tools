@@ -48,9 +48,9 @@ int main()
 	int all = 0, correct = 0; 
 	Perceptron perc(NUM_OF_COOR, alpha);
 	loadDataSet("training.txt", train_data);
+	loadDataSet("test.txt", test_data);
 		for ( int i = 0; i < k; i++ ) 
-		{
-		
+		{ 
 			auto end = train_data.end(); 
 			for (auto it = train_data.begin(); it != end; it++) 
 			{
@@ -58,18 +58,15 @@ int main()
 				perc.updateWeightsnThreshold(it->inputs, it->classifier, y);
 			}
 		}
-
-	loadDataSet("test.txt", test_data);
-		auto end = test_data.end(); 
-		for (auto it = test_data.begin(); it != end; it++) 
+		auto end = test_data.end();
+		for (auto it = test_data.begin(); it != end; it++)
 		{
-				bool y = perc.output(it->inputs);
-				if ( y == it->classifier ) 
-					correct++; 
-				all++;
-				std::cout << "Identified " << y << ", Actual " << it->classifier << std::endl;
+					bool y = perc.output(it->inputs);
+					if ( y == it->classifier ) 
+						correct++; 
+					all++;
+					std::cout << "Identified " << y << ", Actual " << it->classifier << std::endl;
 		}
-				
 				std::cout << "Accuracy " << ((double)correct/all)*100 << "%" << std::endl;
 				return 0;
 }
