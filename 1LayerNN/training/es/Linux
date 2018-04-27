@@ -1,0 +1,7 @@
+Linux es un núcleo mayormente libre semejante al núcleo de Unix.6​ Linux es uno de los principales ejemplos de software libre y de código abierto.7​ Linux está licenciado bajo la GPL v2 y la mayor parte del software incluido en el paquete que se distribuye en su sitio web es software libre. Está desarrollado por colaboradores de todo el mundo. El desarrollo del día a día tiene lugar en la Linux Kernel Mailing List Archive.
+
+El núcleo Linux fue concebido por el entonces estudiante de ciencias de la computación finlandés Linus Torvalds en 1991.8​ Linux consiguió rápidamente desarrolladores y usuarios que adoptaron códigos de otros proyectos de software libre para usarlos con el nuevo núcleo de sistema.9​ A día de hoy miles de programadores de todo el mundo contribuyen en su desarrollo.10​
+
+Linux es multiprogramado, dispone de memoria virtual, gestión de memoria, conectividad en red y permite bibliotecas compartidas. Linux es multiplataforma y es portable a cualquier arquitectura siempre y cuando ésta disponga de una versión de GCC compatible.11​
+
+La parte de un sistema operativo que se ejecuta sin privilegios o en espacio de usuario es la biblioteca del lenguaje C, que provee el entorno de tiempo de ejecución, y una serie de programas o herramientas que permiten la administración y uso del núcleo y proveer servicios al resto de programas en espacio de usuario, formando junto con el núcleo el sistema operativo.

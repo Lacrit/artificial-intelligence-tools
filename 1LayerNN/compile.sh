@@ -1,2 +1,2 @@
 #!/bin/bash 
-g++ OneLayerNN.cpp -o olnn 
+g++  Perceptron.cpp Layer.cpp OneLayerNN.cpp -o olnn 
