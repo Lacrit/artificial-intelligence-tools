@@ -64,6 +64,7 @@ int knapsack(int n)
 		best_value = value;
 		best_weight = weight;
 	}
+	std::cout << "SOLUTION: " << std::endl;
 	std::cout << "weights: " << best_weight << ", values: " << best_value << " || ";
 	return best_vector;
 }
@@ -77,11 +78,15 @@ int main()
 	std::cout  << "n: " << items.size() << std::endl;
 	for ( size_t i = 0; i < items.size(); i++ ) 
 		std::cout << "value: " << items[i].value << ", weight: " << items[i].weight << std::endl;
+	std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
 	int vec = knapsack(n);
+	std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
 	std::cout << "{";
 	for ( int i = 0; i < n; i++ )
 	    std::cout << ((vec >> i) & 1);
-	std::cout << "}, ";
-
+	std::cout << "}, " << std::endl;;
+	std::cout << "DURATION: " << std::endl;
+	auto duration = std::chrono::duration_cast<std::chrono::seconds>( t2 - t1 ).count();
+	std::cout << duration/60 << " minutes " << int(duration%60) << " seconds"; 
 	return 0;
 }
